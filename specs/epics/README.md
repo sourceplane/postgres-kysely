@@ -7,6 +7,6 @@ folder is the adoption; the merge creates the epic in the workspace.
 
 | Epic | Cluster | Status | What it is |
 |------|---------|--------|------------|
-| [`postgres-kysely/`](./postgres-kysely/) | **KY** | In progress (KY0) | Vercel's Postgres + Kysely Next.js Starter, its `db` resolved per request over Hyperdrive to Supabase Postgres and its table applied by db-migrate — and an Orun baseline that instantiates it in one landing (KY2) |
+| [`postgres-kysely/`](./postgres-kysely/) | **KY** | In progress (KY1: the site on Workers) | Vercel's Postgres + Kysely Next.js Starter, its `db` resolved per request over Hyperdrive to Supabase Postgres and its table applied by db-migrate — and an Orun baseline that instantiates it in one landing (KY2) |
 
 As-built ≠ intent: what shipped lives in each epic's `IMPLEMENTATION-STATUS.md`.

@@ -8,7 +8,7 @@ The port keeps the page, the table component, the refresh button, the Kysely typ
 
 | Field | Value |
 |-------|-------|
-| Status | In progress — KY0 on main |
+| Status | In progress — KY1 on main: the site runs on Workers |
 | Cluster | **KY** (KY0–KY2) |
 | Owner(s) | `apps/web` (the page, `lib/kysely.ts`, `lib/seed.ts`, `scripts/migrate.mjs`) · `packages/db` (the migrations and their runner) · `tests/web`, `tests/db` · `infra/terraform/{supabase,cloudflare-hyperdrive}`, `infra/db-migrate` |
 | Builds on | `postgres-drizzle-starter` (the same template family: its Supabase and Hyperdrive roots, migrations, health check and baseline machinery), and through it `lumen` |

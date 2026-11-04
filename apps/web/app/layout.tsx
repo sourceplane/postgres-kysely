@@ -1,0 +1,28 @@
+import './globals.css'
+import { Inter } from 'next/font/google'
+import { SITE_NAME } from '@/lib/site'
+
+export const metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
+  title: SITE_NAME,
+  description:
+    'A simple Next.js app with a Postgres database and Kysely as the ORM',
+}
+
+const inter = Inter({
+  variable: '--font-inter',
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.variable}>{children}</body>
+    </html>
+  )
+}
