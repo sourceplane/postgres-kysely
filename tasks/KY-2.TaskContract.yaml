@@ -1,0 +1,19 @@
+apiVersion: orun.io/v1
+kind: TaskContract
+metadata:
+  name: KY-2
+  title: "The profiles table on Workers and Supabase"
+spec:
+  goal: Vercel's Postgres + Kysely starter runs on Cloudflare Workers + Static Assets with its Postgres a Supabase project reached through Hyperdrive — upstream's db resolved per request, the table and row-level security applied by db-migrate before the Worker serves — with its tests, and its README saying how it maps to Vercel
+  affects:
+    - apps/web
+    - packages/db
+    - infra
+    - tests
+    - pnpm-lock.yaml
+    - pnpm-workspace.yaml
+    - README.md
+  doneWhen:
+    - pnpm typecheck, lint, test and build are green
+    - wrangler dev over the build seeds and lists the three profiles from a migrated database, and says the migrations are pending on a blank one
+  gates: []

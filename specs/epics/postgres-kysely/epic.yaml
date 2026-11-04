@@ -1,0 +1,30 @@
+# The epic's declaration. metadata.name equals the directory name; metadata.key
+# is the task-key prefix this epic reserves (KY → KY-1, KY-2, …). Owner, target
+# date and health are the platform's — never written here.
+apiVersion: orun.io/v1
+kind: Epic
+metadata:
+  name: postgres-kysely
+  key: KY
+spec:
+  title: "Vercel's Postgres + Kysely Next.js Starter on Cloudflare Workers and Supabase"
+  summary: "Vercel's Postgres + Kysely starter — one page that reads a profiles table through Kysely and seeds it on first use — runs on Cloudflare Workers + Static Assets with its Postgres a Supabase project reached through Hyperdrive, the table applied by db-migrate before the app serves, inside the Cirrus baseline's repository conventions, and becomes an Orun baseline that takes a new product from nothing to live on stage and prod in one landing."
+  state: started
+  milestones:
+    - name: "KY0 — the spec"
+      exitCriteria:
+        - "the repository is born with its intent, CI, tooling and spec index, and this doc set and the task contracts are on main"
+      tasks: [KY-1]
+    - name: "KY1 — the profiles table on Workers and Supabase"
+      exitCriteria:
+        - "apps/web is the upstream page on Next.js 16.3.8, built by @opennextjs/cloudflare into one Worker with Static Assets; lib/kysely.ts keeps upstream's `db` and `sql`, resolved to a Kysely client per request over the HYPERDRIVE binding"
+        - "the profiles table (upstream's Kysely schema) and row-level security are packages/db migrations that infra/db-migrate applies before the Worker deploys, after the Supabase project and the Hyperdrive config Terraform creates; the page seeds only the rows"
+        - "`pnpm typecheck`, `pnpm lint`, `pnpm test` and `pnpm build` are green; `wrangler dev` over the build seeds and lists the three profiles from a migrated database and says the migrations are pending on a blank one"
+        - "the README says how to run, test and deploy it, and how every Vercel piece maps to Cloudflare and Supabase"
+      tasks: [KY-2]
+    - name: "KY2 — a baseline"
+      exitCriteria:
+        - "blueprint.yaml (the console card) and repo-blueprint.yaml (the build) take a new product from nothing to live on stage and prod in one landing (supabase → cloudflare-hyperdrive → db-migrate → web), then record it"
+        - "a product built from it carries the product only, renamed throughout to its own name, repository, Worker, Supabase project and Hyperdrive config, with the upstream template's own directory and demo protected from the rename"
+        - "Baseline CI is green: contract tests, generated component docs, the blueprint read by the pinned orun, the leak gate, the offline bootstrap with the product's own plans, and the end-to-end tier — migrated into a real Postgres, built, dry-deployed and served, its first-request seed raced and its table shut to the Data API's roles"
+      tasks: [KY-3]
