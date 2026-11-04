@@ -4,7 +4,7 @@
 |---|---|---|
 | KY0 — the spec | ✅ | KY-1 |
 | KY1 — the profiles table on Workers and Supabase | ✅ | KY-2 |
-| KY2 — a baseline | planned | KY-3 |
+| KY2 — a baseline | ✅ | KY-3, tagged `baseline-v1` |
 
 ## Departures from the upstream template
 
