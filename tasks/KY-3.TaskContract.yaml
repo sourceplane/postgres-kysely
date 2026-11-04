@@ -1,0 +1,33 @@
+apiVersion: orun.io/v1
+kind: TaskContract
+metadata:
+  name: KY-3
+  title: "postgres-kysely becomes an Orun baseline"
+spec:
+  goal: blueprint.yaml and repo-blueprint.yaml take a new product from nothing to live on stage and prod in one landing (Supabase, then Hyperdrive, then the migrations, then the app), branded as its own, its schema applied before the app serves and shut to Supabase's Data API, held by Baseline CI
+  affects:
+    - blueprint.yaml
+    - repo-blueprint.yaml
+    - BOOTSTRAP.md
+    - .baseline
+    - .github/workflows/baseline.yml
+    - .github/workflows/tag.yml
+    - ai/context
+    - docs/phases
+    - hooks
+    - testing
+    - tooling/rebrand
+    - tooling/bootstrap
+    - tooling/catalog
+    - apps/web/docs
+    - packages/db/docs
+    - infra
+    - tests/web/docs
+    - tests/db/docs
+    - specs/epics/postgres-kysely
+    - README.md
+  doneWhen:
+    - every Baseline CI tier is green
+    - the product's own push-to-main plan orders supabase → cloudflare-hyperdrive → db-migrate → web, enforced
+    - a product placed from it carries the product only, branded, with the upstream template's directory and demo unrenamed
+  gates: []
