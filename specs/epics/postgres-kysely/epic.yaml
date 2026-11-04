@@ -9,7 +9,7 @@ metadata:
 spec:
   title: "Vercel's Postgres + Kysely Next.js Starter on Cloudflare Workers and Supabase"
   summary: "Vercel's Postgres + Kysely starter — one page that reads a profiles table through Kysely and seeds it on first use — runs on Cloudflare Workers + Static Assets with its Postgres a Supabase project reached through Hyperdrive, the table applied by db-migrate before the app serves, inside the Cirrus baseline's repository conventions, and becomes an Orun baseline that takes a new product from nothing to live on stage and prod in one landing."
-  state: started
+  state: completed
   milestones:
     - name: "KY0 — the spec"
       exitCriteria:
